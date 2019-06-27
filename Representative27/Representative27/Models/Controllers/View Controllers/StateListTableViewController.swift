@@ -1,4 +1,4 @@
-
+//
 //
 //  StateListTableViewController.swift
 //  Representative27
@@ -21,6 +21,14 @@ class StateListTableViewController: UITableViewController {
         let state = States.all[indexPath.row]
         cell.textLabel?.text = state
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "stateSearchSegue" {
+            guard let destinationVC = segue.destination as? StateDetailTableViewController, let index = tableView.indexPathForSelectedRow else { return }
+            
+            destinationVC.state = States.all[index.row]
+        }
     }
 }
 

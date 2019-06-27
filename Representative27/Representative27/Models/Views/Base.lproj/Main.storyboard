@@ -35,7 +35,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BY5-Pf-jjS" kind="show" identifier="stateDetailSegue" id="nTu-aY-FD7"/>
+                                    <segue destination="BY5-Pf-jjS" kind="show" identifier="stateSearchSegue" id="nTu-aY-FD7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
